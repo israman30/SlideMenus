@@ -10,6 +10,12 @@ import UIKit
 
 import UIKit
 
+extension UIView {
+    func addSubViews(_ views: UIView...) {
+        views.forEach { addSubview($0) }
+    }
+}
+
 struct AnchoredConstraints {
     var top, left, bottom, right, width, height: NSLayoutConstraint?
 }
@@ -103,14 +109,14 @@ extension UIView {
         }
     }
     
-    func centerInSuperview(size: CGSize = .zero) {
+    func centerInSuperview(size: CGSize = .zero, constantX: CGFloat = 0, constantY: CGFloat = 0) {
         translatesAutoresizingMaskIntoConstraints = false
         if let superviewCenterXAnchor = superview?.centerXAnchor {
-            centerXAnchor.constraint(equalTo: superviewCenterXAnchor).isActive = true
+            centerXAnchor.constraint(equalTo: superviewCenterXAnchor, constant: constantX).isActive = true
         }
         
         if let superviewCenterYAnchor = superview?.centerYAnchor {
-            centerYAnchor.constraint(equalTo: superviewCenterYAnchor).isActive = true
+            centerYAnchor.constraint(equalTo: superviewCenterYAnchor, constant: constantY).isActive = true
         }
         
         if size.width != 0 {
