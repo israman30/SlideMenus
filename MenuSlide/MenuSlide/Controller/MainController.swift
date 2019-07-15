@@ -35,27 +35,47 @@ class MainController: UIViewController {
         setLeftMenuView()
     }
     
+    @objc func handleRightMenu(){
+        print("right button")
+    }
+    
     @objc func handleLeftMenu(){
-        print("Left button")
         leftAnchorConstraint?.constant = 0
+        view.alpha = 0.5
         UIView.animate(withDuration: 0.4) {
             self.view.layoutIfNeeded()
         }
     }
     
-    @objc func handleRightMenu(){
-        print("right button")
+    @objc func handleCloseLeftMenu(){
+        leftAnchorConstraint?.constant = -300
+        view.alpha = 1
+        UIView.animate(withDuration: 0.4) {
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+    @objc func handleSwipeLeftMenu(gesture: UISwipeGestureRecognizer){
+        if gesture.direction == .right {
+            print(123)
+        } else if gesture.direction == .right{
+            print(345)
+        }
+        
     }
     
     var leftAnchorConstraint: NSLayoutConstraint?
     
     func setLeftMenuView() {
         let leftMenuView = UIView()
-        leftMenuView.backgroundColor = .gray
+        leftMenuView.backgroundColor = .white
+        leftMenuView.isUserInteractionEnabled = true
+        leftMenuView.addGestureRecognizer(UISwipeGestureRecognizer(target: self, action: #selector(handleSwipeLeftMenu)))
         
         let closeButton = UIButton(type: .system)
         closeButton.setTitle("X", for: .normal)
         closeButton.setTitleColor(.black, for: .normal)
+        closeButton.addTarget(self, action: #selector(handleCloseLeftMenu), for: .touchUpInside)
         
         let nameLabel: UILabel = {
             let label = UILabel()
@@ -86,6 +106,7 @@ class MainController: UIViewController {
         nameLabel.anchor(top: profilePhoto.bottomAnchor, left: leftMenuView.leftAnchor, bottom: nil, right: leftMenuView.rightAnchor, padding: .init(top: 20, left: 0, bottom: 0, right: 0), size: .init(width: 0, height: 30))
         
     }
+    
 
 }
 
