@@ -37,15 +37,25 @@ class MainController: UIViewController {
     
     @objc func handleLeftMenu(){
         print("Left button")
+        leftAnchorConstraint?.constant = 0
+        UIView.animate(withDuration: 0.4) {
+            self.view.layoutIfNeeded()
+        }
     }
     
     @objc func handleRightMenu(){
         print("right button")
     }
     
+    var leftAnchorConstraint: NSLayoutConstraint?
+    
     func setLeftMenuView() {
         let leftMenuView = UIView()
         leftMenuView.backgroundColor = .gray
+        
+        let closeButton = UIButton(type: .system)
+        closeButton.setTitle("X", for: .normal)
+        closeButton.setTitleColor(.black, for: .normal)
         
         let nameLabel: UILabel = {
             let label = UILabel()
@@ -58,12 +68,18 @@ class MainController: UIViewController {
         
         view.addSubview(leftMenuView)
         
-        leftMenuView.anchor(top: view.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: nil, padding: .init(top: 0, left: 0, bottom: 0, right: 0), size: .init(width: 300, height: view.frame.height))
+        leftMenuView.anchor(top: view.topAnchor, left: nil, bottom: view.bottomAnchor, right: nil, padding: .init(top: 0, left: 0, bottom: 0, right: 0), size: .init(width: 300, height: view.frame.height))
+        leftMenuView.translatesAutoresizingMaskIntoConstraints = false
+        
+        leftAnchorConstraint = leftMenuView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: -300)
+        leftAnchorConstraint?.isActive = true
         
         
         let profilePhoto = UIImageView(image: #imageLiteral(resourceName: "icons8-name-100"))
         
-        leftMenuView.addSubViews(profilePhoto, nameLabel)
+        leftMenuView.addSubViews(profilePhoto, nameLabel, closeButton)
+        
+        closeButton.anchor(top: leftMenuView.topAnchor, left: nil, bottom: nil, right: leftMenuView.rightAnchor, padding: .init(top: 40, left: 0, bottom: 0, right: 15), size: .init(width: 40, height: 40))
         
         profilePhoto.centerInSuperview(size: .init(width: 120, height: 120), constantX: 0, constantY: -220)
         
