@@ -41,17 +41,19 @@ class MainController: UIViewController {
     
     @objc func handleLeftMenu(){
         leftAnchorConstraint?.constant = 0
-        view.alpha = 0.5
+        
         UIView.animate(withDuration: 0.4) {
             self.view.layoutIfNeeded()
+            self.view.backgroundColor = UIColor(white: 0.5, alpha: 0.5)
         }
     }
     
     @objc func handleCloseLeftMenu(){
         leftAnchorConstraint?.constant = -300
-        view.alpha = 1
+        
         UIView.animate(withDuration: 0.4) {
             self.view.layoutIfNeeded()
+            self.view.backgroundColor = UIColor(white: 1, alpha: 1)
         }
     }
     
