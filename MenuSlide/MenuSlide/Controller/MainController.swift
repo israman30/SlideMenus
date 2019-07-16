@@ -34,12 +34,10 @@ class MainController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addSubview(containerWindow)
-        containerWindow.frame = view.frame
+        setContainerView()
         setMainView()
         setMenuButtons()
         setLeftMenuView()
-        handleTapCloseMenuMainView(view: containerWindow)
     }
     
     @objc func handleRightMenu(){

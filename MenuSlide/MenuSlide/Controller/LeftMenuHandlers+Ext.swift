@@ -10,6 +10,12 @@ import UIKit
 
 extension MainController {
     
+    func setContainerView() {
+        view.addSubview(containerWindow)
+        containerWindow.frame = view.frame
+        handleTapCloseMenuMainView(view: containerWindow)
+    }
+    
     // MARK: Left Menu Block
     @objc func handleLeftMenu(){
         leftAnchorConstraint?.constant = -5
