@@ -40,12 +40,60 @@ class MainController: UIViewController {
         setMainView()
         setMenuButtons()
         setLeftMenuView()
+        
+        setRightMenuView()
     }
     
     @objc func handleRightMenu(){
         print("right button")
+        
+        if let window = UIApplication.shared.keyWindow {
+            containerWindow.backgroundColor = UIColor(white: 0, alpha: 0.7)
+            
+            containerWindow.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTapDimissMenu)))
+            
+            window.addSubview(containerWindow)
+            containerWindow.frame = window.frame
+            containerWindow.alpha = 0
+            
+            UIView.animate(withDuration: 0.5) {
+                self.containerWindow.alpha = 1
+            }
+        }
     }
     
+    @objc func handleTapDimissMenu(){
+        UIView.animate(withDuration: 0.5) {
+            self.containerWindow.alpha = 0
+        }
+    }
+    
+    var rightAnchorConstrain: NSLayoutConstraint?
+    
+    func setRightMenuView() {
+        
+        let rightMenuView = UIView()
+        
+        rightMenuView.backgroundColor = .red
+        view.addSubview(rightMenuView)
+        rightMenuView.anchor(top: view.topAnchor, left: nil, bottom: view.bottomAnchor, right: nil, padding: .init(top: 0, left: 0, bottom: 0, right: 0), size: .init(width: 120, height: 0))
+        
+        rightMenuView.translatesAutoresizingMaskIntoConstraints = false
+        rightAnchorConstrain = rightMenuView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 120)
+        rightAnchorConstrain?.isActive = true
+        
+        let settingIcon = UIImageView(image: #imageLiteral(resourceName: "settings"))
+        let putIcon = UIImageView(image: #imageLiteral(resourceName: "put"))
+        let codeIcon = UIImageView(image: #imageLiteral(resourceName: "code"))
+        
+        let stackView = UIStackView(arrangedSubviews: [settingIcon, putIcon, codeIcon])
+        stackView.axis = .vertical
+        stackView.distribution = .fillEqually
+        stackView.spacing = 40
+        
+        rightMenuView.addSubview(stackView)
+        stackView.centerInSuperview(size: .init(width: 50, height: 220), constantX: 0, constantY: 0)
+    }
 
 }
 
