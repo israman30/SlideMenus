@@ -28,8 +28,10 @@ class MainController: UIViewController {
         return label
     }()
     
+    // MARK: - Left anchor reference the left constraint to be animated for menu view
     var leftAnchorConstraint: NSLayoutConstraint?
     
+    // MARK: - Conatainer view cover the parent view using alpha when menu view opens
     let containerWindow = UIView()
 
     override func viewDidLoad() {
