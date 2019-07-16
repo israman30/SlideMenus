@@ -13,6 +13,8 @@
 		4DDBF0F622DCBEB700A243B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DDBF0F422DCBEB700A243B8 /* LaunchScreen.storyboard */; };
 		4DDBF0FE22DCBF7400A243B8 /* ViewLayout+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDBF0FD22DCBF7400A243B8 /* ViewLayout+Ext.swift */; };
 		4DDBF10322DCC9DF00A243B8 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDBF10222DCC9DF00A243B8 /* MainView.swift */; };
+		4DDBF10522DD60B200A243B8 /* LeftMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDBF10422DD60B200A243B8 /* LeftMenuView.swift */; };
+		4DDBF10722DD62D600A243B8 /* LeftMenuHandlers+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDBF10622DD62D600A243B8 /* LeftMenuHandlers+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		4DDBF0F722DCBEB700A243B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DDBF0FD22DCBF7400A243B8 /* ViewLayout+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewLayout+Ext.swift"; sourceTree = "<group>"; };
 		4DDBF10222DCC9DF00A243B8 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		4DDBF10422DD60B200A243B8 /* LeftMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenuView.swift; sourceTree = "<group>"; };
+		4DDBF10622DD62D600A243B8 /* LeftMenuHandlers+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LeftMenuHandlers+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,7 @@
 			children = (
 				4DDBF0EB22DCBEB300A243B8 /* AppDelegate.swift */,
 				4DDBF0ED22DCBEB300A243B8 /* MainController.swift */,
+				4DDBF10622DD62D600A243B8 /* LeftMenuHandlers+Ext.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -78,6 +83,7 @@
 			children = (
 				4DDBF0FD22DCBF7400A243B8 /* ViewLayout+Ext.swift */,
 				4DDBF10222DCC9DF00A243B8 /* MainView.swift */,
+				4DDBF10422DD60B200A243B8 /* LeftMenuView.swift */,
 				4DDBF0F222DCBEB700A243B8 /* Assets.xcassets */,
 				4DDBF0F422DCBEB700A243B8 /* LaunchScreen.storyboard */,
 			);
@@ -163,7 +169,9 @@
 			files = (
 				4DDBF0EE22DCBEB300A243B8 /* MainController.swift in Sources */,
 				4DDBF10322DCC9DF00A243B8 /* MainView.swift in Sources */,
+				4DDBF10722DD62D600A243B8 /* LeftMenuHandlers+Ext.swift in Sources */,
 				4DDBF0FE22DCBF7400A243B8 /* ViewLayout+Ext.swift in Sources */,
+				4DDBF10522DD60B200A243B8 /* LeftMenuView.swift in Sources */,
 				4DDBF0EC22DCBEB300A243B8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
