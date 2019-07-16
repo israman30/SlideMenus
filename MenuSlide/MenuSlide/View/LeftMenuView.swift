@@ -7,6 +7,11 @@
 //
 
 import UIKit
+/*
+ - This extension set the left menu view.
+ - Constains default layout and action button to close the menu view.
+ - Contains a reference left anchor to open and close the menu view.
+ */
 
 extension MainController {
     
@@ -35,7 +40,6 @@ extension MainController {
         
         leftAnchorConstraint = leftMenuView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: -300)
         leftAnchorConstraint?.isActive = true
-        
         
         let profilePhoto = UIImageView(image: #imageLiteral(resourceName: "icons8-name-100"))
         
