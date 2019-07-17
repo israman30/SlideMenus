@@ -13,12 +13,13 @@ extension SecondController {
     func setRightMenuView() {
         
         let rightMenuView = UIView()
-        rightMenuView.backgroundColor = .red
+        rightMenuView.backgroundColor = .white
         
         let closeButton = UIButton(type: .system)
         closeButton.setTitle("close", for: .normal)
         closeButton.setTitleColor(.white, for: .normal)
         closeButton.backgroundColor = .black
+        closeButton.layer.cornerRadius = 2
         closeButton.addTarget(self, action: #selector(handleCloseRightMenu), for: .touchUpInside)
         
         view.addSubview(rightMenuView)
@@ -29,10 +30,6 @@ extension SecondController {
         rightAnchorConstraint = rightMenuView.leftAnchor.constraint(equalTo: view.rightAnchor, constant: 0)
         rightAnchorConstraint?.isActive = true
         
-        rightMenuView.addSubViews(closeButton)
-        
-        closeButton.anchor(top: rightMenuView.topAnchor, left: rightMenuView.leftAnchor, bottom: nil, right: nil, padding: .init(top: 60, left: 15, bottom: 0, right: 0), size: .init(width: 50, height: 20))
-        
         let settingIcon = UIImageView(image: #imageLiteral(resourceName: "settings"))
         let codeIcon = UIImageView(image: #imageLiteral(resourceName: "code"))
         let putIcon = UIImageView(image: #imageLiteral(resourceName: "put"))
@@ -42,8 +39,12 @@ extension SecondController {
         stackView.distribution = .fillEqually
         stackView.spacing = 10
         
-        rightMenuView.addSubview(stackView)
-        stackView.centerInSuperview(size: .init(width: 50, height: 150), constantX: 0, constantY: 0)
+        rightMenuView.addSubViews(closeButton,stackView)
+        
+        closeButton.anchor(top: rightMenuView.topAnchor, left: rightMenuView.leftAnchor, bottom: nil, right: rightMenuView.rightAnchor, padding: .init(top: 60, left: 15, bottom: 0, right: 15), size: .init(width: 50, height: 20))
+        
+        
+        stackView.centerInSuperview(size: .init(width: 45, height: 150), constantX: 0, constantY: 0)
     }
 }
 
