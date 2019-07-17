@@ -19,6 +19,7 @@
 		4DE2E5AE22DEB9FE0046DA6F /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE2E5AD22DEB9FE0046DA6F /* SecondView.swift */; };
 		4DE2E5B022DEBA1C0046DA6F /* RightMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE2E5AF22DEBA1C0046DA6F /* RightMenuView.swift */; };
 		4DE2E5B222DF546B0046DA6F /* RightMenuHandlers+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE2E5B122DF546B0046DA6F /* RightMenuHandlers+Ext.swift */; };
+		4DE2E5B622DF55840046DA6F /* ThirdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE2E5B522DF55840046DA6F /* ThirdController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		4DE2E5AD22DEB9FE0046DA6F /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
 		4DE2E5AF22DEBA1C0046DA6F /* RightMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightMenuView.swift; sourceTree = "<group>"; };
 		4DE2E5B122DF546B0046DA6F /* RightMenuHandlers+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RightMenuHandlers+Ext.swift"; sourceTree = "<group>"; };
+		4DE2E5B522DF55840046DA6F /* ThirdController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,8 +81,8 @@
 		4DDBF0FF22DCC94000A243B8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				4DE2E5B322DF54F20046DA6F /* Third */,
 				4DDBF0EB22DCBEB300A243B8 /* AppDelegate.swift */,
+				4DE2E5B322DF54F20046DA6F /* Third */,
 				4DE2E5AC22DEB9E40046DA6F /* Second */,
 				4DE2E5AA22DEB9C80046DA6F /* Main */,
 			);
@@ -90,8 +92,8 @@
 		4DDBF10022DCC94A00A243B8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				4DE2E5B422DF54FB0046DA6F /* Third */,
 				4DDBF0FD22DCBF7400A243B8 /* ViewLayout+Ext.swift */,
+				4DE2E5B422DF54FB0046DA6F /* Third */,
 				4DE2E5AB22DEB9DC0046DA6F /* Second */,
 				4DDBF10B22DEB95200A243B8 /* Main */,
 				4DDBF0F222DCBEB700A243B8 /* Assets.xcassets */,
@@ -146,6 +148,7 @@
 		4DE2E5B322DF54F20046DA6F /* Third */ = {
 			isa = PBXGroup;
 			children = (
+				4DE2E5B522DF55840046DA6F /* ThirdController.swift */,
 			);
 			path = Third;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 				4DE2E5B222DF546B0046DA6F /* RightMenuHandlers+Ext.swift in Sources */,
 				4DDBF10722DD62D600A243B8 /* LeftMenuHandlers+Ext.swift in Sources */,
 				4DDBF0FE22DCBF7400A243B8 /* ViewLayout+Ext.swift in Sources */,
+				4DE2E5B622DF55840046DA6F /* ThirdController.swift in Sources */,
 				4DDBF10522DD60B200A243B8 /* LeftMenuView.swift in Sources */,
 				4DDBF0EC22DCBEB300A243B8 /* AppDelegate.swift in Sources */,
 				4DE2E5B022DEBA1C0046DA6F /* RightMenuView.swift in Sources */,

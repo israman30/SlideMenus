@@ -20,7 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         
 //        window?.rootViewController = MainController()
-        window?.rootViewController = SecondController()
+//        window?.rootViewController = SecondController()
+        window?.rootViewController = ThirdController()
         return true
     }
 
