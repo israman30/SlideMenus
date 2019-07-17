@@ -16,6 +16,8 @@
 		4DDBF10522DD60B200A243B8 /* LeftMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDBF10422DD60B200A243B8 /* LeftMenuView.swift */; };
 		4DDBF10722DD62D600A243B8 /* LeftMenuHandlers+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDBF10622DD62D600A243B8 /* LeftMenuHandlers+Ext.swift */; };
 		4DDBF10922DEB0C600A243B8 /* SecondController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDBF10822DEB0C600A243B8 /* SecondController.swift */; };
+		4DE2E5AE22DEB9FE0046DA6F /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE2E5AD22DEB9FE0046DA6F /* SecondView.swift */; };
+		4DE2E5B022DEBA1C0046DA6F /* RightMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE2E5AF22DEBA1C0046DA6F /* RightMenuView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		4DDBF10422DD60B200A243B8 /* LeftMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenuView.swift; sourceTree = "<group>"; };
 		4DDBF10622DD62D600A243B8 /* LeftMenuHandlers+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LeftMenuHandlers+Ext.swift"; sourceTree = "<group>"; };
 		4DDBF10822DEB0C600A243B8 /* SecondController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondController.swift; sourceTree = "<group>"; };
+		4DE2E5AD22DEB9FE0046DA6F /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
+		4DE2E5AF22DEBA1C0046DA6F /* RightMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightMenuView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,9 +78,8 @@
 			isa = PBXGroup;
 			children = (
 				4DDBF0EB22DCBEB300A243B8 /* AppDelegate.swift */,
-				4DDBF0ED22DCBEB300A243B8 /* MainController.swift */,
-				4DDBF10822DEB0C600A243B8 /* SecondController.swift */,
-				4DDBF10622DD62D600A243B8 /* LeftMenuHandlers+Ext.swift */,
+				4DE2E5AC22DEB9E40046DA6F /* Second */,
+				4DE2E5AA22DEB9C80046DA6F /* Main */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -85,8 +88,8 @@
 			isa = PBXGroup;
 			children = (
 				4DDBF0FD22DCBF7400A243B8 /* ViewLayout+Ext.swift */,
-				4DDBF10222DCC9DF00A243B8 /* MainView.swift */,
-				4DDBF10422DD60B200A243B8 /* LeftMenuView.swift */,
+				4DE2E5AB22DEB9DC0046DA6F /* Second */,
+				4DDBF10B22DEB95200A243B8 /* Main */,
 				4DDBF0F222DCBEB700A243B8 /* Assets.xcassets */,
 				4DDBF0F422DCBEB700A243B8 /* LaunchScreen.storyboard */,
 			);
@@ -98,6 +101,41 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		4DDBF10B22DEB95200A243B8 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				4DDBF10222DCC9DF00A243B8 /* MainView.swift */,
+				4DDBF10422DD60B200A243B8 /* LeftMenuView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		4DE2E5AA22DEB9C80046DA6F /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				4DDBF0ED22DCBEB300A243B8 /* MainController.swift */,
+				4DDBF10622DD62D600A243B8 /* LeftMenuHandlers+Ext.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		4DE2E5AB22DEB9DC0046DA6F /* Second */ = {
+			isa = PBXGroup;
+			children = (
+				4DE2E5AD22DEB9FE0046DA6F /* SecondView.swift */,
+				4DE2E5AF22DEBA1C0046DA6F /* RightMenuView.swift */,
+			);
+			path = Second;
+			sourceTree = "<group>";
+		};
+		4DE2E5AC22DEB9E40046DA6F /* Second */ = {
+			isa = PBXGroup;
+			children = (
+				4DDBF10822DEB0C600A243B8 /* SecondController.swift */,
+			);
+			path = Second;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,11 +210,13 @@
 			files = (
 				4DDBF10922DEB0C600A243B8 /* SecondController.swift in Sources */,
 				4DDBF0EE22DCBEB300A243B8 /* MainController.swift in Sources */,
+				4DE2E5AE22DEB9FE0046DA6F /* SecondView.swift in Sources */,
 				4DDBF10322DCC9DF00A243B8 /* MainView.swift in Sources */,
 				4DDBF10722DD62D600A243B8 /* LeftMenuHandlers+Ext.swift in Sources */,
 				4DDBF0FE22DCBF7400A243B8 /* ViewLayout+Ext.swift in Sources */,
 				4DDBF10522DD60B200A243B8 /* LeftMenuView.swift in Sources */,
 				4DDBF0EC22DCBEB300A243B8 /* AppDelegate.swift in Sources */,
+				4DE2E5B022DEBA1C0046DA6F /* RightMenuView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
