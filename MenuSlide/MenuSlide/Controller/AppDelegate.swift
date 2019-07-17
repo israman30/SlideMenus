@@ -21,7 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
 //        window?.rootViewController = MainController()
 //        window?.rootViewController = SecondController()
-        window?.rootViewController = ThirdController()
+//        window?.rootViewController = ThirdController()
+        window?.rootViewController = FourthController()
         return true
     }
 

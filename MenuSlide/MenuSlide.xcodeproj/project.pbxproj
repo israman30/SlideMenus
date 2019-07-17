@@ -22,6 +22,7 @@
 		4DE2E5B622DF55840046DA6F /* ThirdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE2E5B522DF55840046DA6F /* ThirdController.swift */; };
 		4DE2E5B822DF65130046DA6F /* MenuLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE2E5B722DF65130046DA6F /* MenuLauncher.swift */; };
 		4DE2E5BA22DF66A50046DA6F /* ThirdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE2E5B922DF66A50046DA6F /* ThirdView.swift */; };
+		4DE2E5BE22DF6D730046DA6F /* FourthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE2E5BD22DF6D730046DA6F /* FourthController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		4DE2E5B522DF55840046DA6F /* ThirdController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdController.swift; sourceTree = "<group>"; };
 		4DE2E5B722DF65130046DA6F /* MenuLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuLauncher.swift; sourceTree = "<group>"; };
 		4DE2E5B922DF66A50046DA6F /* ThirdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdView.swift; sourceTree = "<group>"; };
+		4DE2E5BD22DF6D730046DA6F /* FourthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				4DDBF0EB22DCBEB300A243B8 /* AppDelegate.swift */,
+				4DE2E5BB22DF6D500046DA6F /* Fourth */,
 				4DE2E5B322DF54F20046DA6F /* Third */,
 				4DE2E5AC22DEB9E40046DA6F /* Second */,
 				4DE2E5AA22DEB9C80046DA6F /* Main */,
@@ -96,6 +99,7 @@
 		4DDBF10022DCC94A00A243B8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4DE2E5BC22DF6D5E0046DA6F /* Fourth */,
 				4DDBF0FD22DCBF7400A243B8 /* ViewLayout+Ext.swift */,
 				4DE2E5B422DF54FB0046DA6F /* Third */,
 				4DE2E5AB22DEB9DC0046DA6F /* Second */,
@@ -164,6 +168,21 @@
 				4DE2E5B922DF66A50046DA6F /* ThirdView.swift */,
 			);
 			path = Third;
+			sourceTree = "<group>";
+		};
+		4DE2E5BB22DF6D500046DA6F /* Fourth */ = {
+			isa = PBXGroup;
+			children = (
+				4DE2E5BD22DF6D730046DA6F /* FourthController.swift */,
+			);
+			path = Fourth;
+			sourceTree = "<group>";
+		};
+		4DE2E5BC22DF6D5E0046DA6F /* Fourth */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fourth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,6 +262,7 @@
 				4DDBF10322DCC9DF00A243B8 /* MainView.swift in Sources */,
 				4DE2E5B822DF65130046DA6F /* MenuLauncher.swift in Sources */,
 				4DE2E5B222DF546B0046DA6F /* RightMenuHandlers+Ext.swift in Sources */,
+				4DE2E5BE22DF6D730046DA6F /* FourthController.swift in Sources */,
 				4DDBF10722DD62D600A243B8 /* LeftMenuHandlers+Ext.swift in Sources */,
 				4DDBF0FE22DCBF7400A243B8 /* ViewLayout+Ext.swift in Sources */,
 				4DE2E5B622DF55840046DA6F /* ThirdController.swift in Sources */,
