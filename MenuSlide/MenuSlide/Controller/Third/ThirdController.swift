@@ -28,11 +28,7 @@ class ThirdController: UIViewController {
         return label
     }()
     
-    // MARK: - Left anchor reference the left constraint to be animated for menu view
-    var rightAnchorConstraint: NSLayoutConstraint?
-    
-    // MARK: - Conatainer view cover the parent view using alpha when menu view opens
-    let containerWindow = UIView()
+    lazy var menuLauncher = MenuLauncher()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,50 +36,11 @@ class ThirdController: UIViewController {
         setThirdView()
     }
     
-    func setThirdView() {
-        view.backgroundColor = .white
-        view.addSubViews(nameLabel, authorLabel)
-        nameLabel.centerInSuperview(
-            size: .init(width: view.frame.width, height: 40),
-            constantY: -100
-        )
-        
-        authorLabel.centerInSuperview(
-            size: .init(width: view.frame.width, height: 30),
-            constantY: 200
-        )
+    @objc func handleOpenBottomMenu(){
+        menuLauncher.showBottomMenu()
     }
-    
-    func setMenuButtons() {
-        
-        let leftMenuButton = UIButton(type: .system)
-        leftMenuButton.setImage(#imageLiteral(resourceName: "left"), for: .normal)
-        
-        let rightMenuButton = UIButton(type: .system)
-        rightMenuButton.setImage(#imageLiteral(resourceName: "right"), for: .normal)
-        
-        view.addSubViews(leftMenuButton, rightMenuButton)
-        
-        leftMenuButton.anchor(
-            top: view.safeAreaLayoutGuide.topAnchor,
-            left: view.leftAnchor,
-            bottom: nil,
-            right: nil,
-            padding: .init(top: 10, left: 15, bottom: 0, right: 0),
-            size: .init(width: 30, height: 30)
-        )
-        
-        rightMenuButton.anchor(
-            top: view.safeAreaLayoutGuide.topAnchor,
-            left: nil,
-            bottom: nil,
-            right: view.rightAnchor,
-            padding: .init(top: 10, left: 0, bottom: 0, right: 15),
-            size: .init(width: 20, height: 30)
-        )
-    }
-    
     
 }
+
 
 
