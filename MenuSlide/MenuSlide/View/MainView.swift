@@ -32,7 +32,6 @@ extension MainController {
         
         let rightMenuButton = UIButton(type: .system)
         rightMenuButton.setImage(#imageLiteral(resourceName: "right"), for: .normal)
-        rightMenuButton.addTarget(self, action: #selector(handleRightMenu), for: .touchUpInside)
         
         view.addSubViews(leftMenuButton, rightMenuButton)
         
